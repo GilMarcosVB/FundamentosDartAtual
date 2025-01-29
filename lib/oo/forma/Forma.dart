@@ -1,14 +1,17 @@
 import 'enum.dart';
 
-abstract class Forma{
+abstract class Forma {
   tpForma tipoForma;
 
-  Forma( this.tipoForma );
+  static int idFormaClasse = 0;
+  int idFormaInstancia = 0;
+
+  Forma(this.tipoForma);
 
   double calculaArea();
 
-  void imprimeForma(){     
-     print("${tipoForma.name} com área de ${calculaArea()}");
-  } 
-
+  void imprimeForma() {
+    print(
+        "${tipoForma.name} com área de ${calculaArea()} <-> ID Da Forma: Classe ${idFormaClasse} Instancia ${idFormaInstancia} ");
+  }
 }
